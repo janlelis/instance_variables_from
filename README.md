@@ -1,11 +1,11 @@
-# instance_variables_from [![[version]](https://badge.fury.io/rb/instance_variables_from.svg)](http://badge.fury.io/rb/instance_variables_from)  [![[travis]](https://travis-ci.org/janlelis/instance_variables_from.png)](https://travis-ci.org/janlelis/instance_variables_from)
+# Kernel#instance_variables_from [![[version]](https://badge.fury.io/rb/instance_variables_from.svg)](http://badge.fury.io/rb/instance_variables_from)  [![[travis]](https://travis-ci.org/janlelis/instance_variables_from.png)](https://travis-ci.org/janlelis/instance_variables_from)
 
 Automatically turn bindings, hashes or arrays into instance variables. Instead of:
 
 ```ruby
 def initialize(a, b)
   @a = a
-	@b = b
+  @b = b
 end
 ```
 

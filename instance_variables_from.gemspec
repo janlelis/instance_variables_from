@@ -5,8 +5,8 @@ require File.dirname(__FILE__) + "/lib/instance_variables_from/version"
 Gem::Specification.new do |gem|
   gem.name          = "instance_variables_from"
   gem.version       = InstanceVariablesFrom::VERSION
-  gem.summary       = "TODO"
-  gem.description   = "TODO"
+  gem.summary       = "Turn bindings, hashes or arrays into instance variables."
+  gem.description   = "Automatically turn bindings, hashes or arrays into instance variables."
   gem.authors       = ["Jan Lelis"]
   gem.email         = ["mail@janlelis.de"]
   gem.homepage      = "https://github.com/janlelis/instance_variables_from"
