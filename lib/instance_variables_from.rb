@@ -3,26 +3,26 @@ require_relative "instance_variables_from/version"
 module Kernel
   private
 
-  def instance_variables_from(obj, *only)
-    iter = case obj
+  def instance_variables_from(obj, *whitelist)
+    values_to_assign = case obj
     when Binding
-      obj.eval('local_variables').map{|e| [obj.eval("#{e}"), e] }
+      obj.eval('local_variables').map{ |e| [obj.eval("#{e}"), e] }
     when Hash
       obj.map{|k,v| [v,k] }
-    else # Enumerable
+    else
       obj.each.with_index
     end
 
-    ret = []
-    iter.each{ |value, arg|
-      arg = arg.to_s
-      if only.include?(arg) || only.include?(arg.to_sym) || only.empty?
-        arg = '_' + arg  if (48..57).member? arg.unpack('C')[0]  # 1.8+1.9
-        ret << ivar = :"@#{arg}"
-        self.instance_variable_set ivar, value
-      end
+    unless whitelist.empty?
+      values_to_assign.select!{ |value, key| whitelist.include? key.to_sym }
+    end
+
+    values_to_assign.map{ |value, key|
+      key = key.to_s
+      ivar_name = :"@#{'_' if key =~ /\A\d/}#{key}"
+      instance_variable_set(ivar_name, value)
+      ivar_name
     }
-    ret
   end
 end
 

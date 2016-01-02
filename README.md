@@ -24,6 +24,13 @@ params = { c: 3, d: 4 }
 instance_variables_from params # will assign @c and @d
 ```
 
+When you pass additional arguments, they will be interpreted as whitelist:
+
+```ruby
+params = { c: 3, d: 4 }
+instance_variables_from params, :c # will only assign @c
+```
+
 ## Setup
 
 Add to your `Gemfile`:

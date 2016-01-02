@@ -19,4 +19,16 @@ describe 'Kernel#instance_variables_from' do
     assert_equal 3, @c
     assert_equal 4, @d
   end
+
+  it 'takes a whitelist as splat param' do
+    params = { c: 3, d: 4 }
+    instance_variables_from params, :c
+
+    assert_equal 3, @c
+    assert_equal false, instance_variables.include?(:@d)
+  end
+
+  it 'returns the instance variable names assigned' do
+    assert_equal [:@c, :@d], instance_variables_from({ c: 3, d: 4 })
+  end  
 end
