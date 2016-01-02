@@ -11,6 +11,8 @@ module Kernel
       obj.map{|k,v| [v,k] }
     when Array
       obj.each.with_index
+    else
+      raise ArgumentError, "cannot extract instance_variables from #{obj}"
     end
 
     unless whitelist.empty?

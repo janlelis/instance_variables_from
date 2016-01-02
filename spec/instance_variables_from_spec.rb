@@ -38,4 +38,10 @@ describe 'Kernel#instance_variables_from' do
   it 'returns the instance variable names assigned' do
     assert_equal [:@c, :@d], instance_variables_from({ c: 3, d: 4 })
   end
+
+  it 'raises an ArgumenError for unknown objects to extract from' do
+    assert_raises ArgumentError do
+      instance_variables_from(nil)
+    end
+  end
 end
