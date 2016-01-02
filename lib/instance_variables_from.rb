@@ -9,7 +9,7 @@ module Kernel
       obj.eval('local_variables').map{ |e| [obj.eval("#{e}"), e] }
     when Hash
       obj.map{|k,v| [v,k] }
-    else
+    when Array
       obj.each.with_index
     end
 
