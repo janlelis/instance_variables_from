@@ -1,4 +1,4 @@
-# Kernel#instance_variables_from [![[version]](https://badge.fury.io/rb/instance_variables_from.svg)](http://badge.fury.io/rb/instance_variables_from)  [![[travis]](https://travis-ci.org/janlelis/instance_variables_from.png)](https://travis-ci.org/janlelis/instance_variables_from)
+# Kernel#instance_variables_from [![[version]](https://badge.fury.io/rb/instance_variables_from.svg)](http://badge.fury.io/rb/instance_variables_from) [![[ci]](https://github.com/janlelis/instance_variable_from/workflows/Test/badge.svg)](https://github.com/janlelis/instance_variable_from/actions?query=workflow%3ATest)
 
 Automatically turn bindings, hashes or arrays into instance variables. Instead of:
 
@@ -49,4 +49,4 @@ gem 'instance_variables_from'
 
 ## MIT License
 
-Copyright (C) 2010-2016 Jan Lelis <http://janlelis.com>. Released under the MIT license.
+Copyright (C) 2010-2016 Jan Lelis <https://janlelis.com>. Released under the MIT license.
