@@ -1,4 +1,4 @@
-# Kernel#instance_variables_from [![[version]](https://badge.fury.io/rb/instance_variables_from.svg)](http://badge.fury.io/rb/instance_variables_from) [![[ci]](https://github.com/janlelis/instance_variable_from/workflows/Test/badge.svg)](https://github.com/janlelis/instance_variable_from/actions?query=workflow%3ATest)
+# Kernel#instance_variables_from [![[version]](https://badge.fury.io/rb/instance_variables_from.svg)](http://badge.fury.io/rb/instance_variables_from) [![[ci]](https://github.com/janlelis/instance_variables_from/workflows/Test/badge.svg)](https://github.com/janlelis/instance_variables_from/actions?query=workflow%3ATest)
 
 Automatically turn bindings, hashes or arrays into instance variables. Instead of:
 
